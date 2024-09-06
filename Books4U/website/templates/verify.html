@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+{%block title%}SignUp{%endblock%}
+{%block content%}
+<div class="container-xxl min-vh-100   bg-dark" >
+    <div class="row d-flex justify-content-center">
+        <div class="col-md-7">
+            <div class="card px-5 py-5 mt-3" id="form1"><header class="border-bottom pb-3 mb-4 fw-bolder text-center fa-2x">VERIFY</header>
+                <div class="form-data" v-if="!submitted">
+                    <div class="forms-inputs mb-4 fw-bold">
+<div class="forms-inputs mb-4 fw-bold">
+    <div>Categories</div>
+    <select id="options"  v-model="selectedOption" class="select w-100">
+      <option value="" disabled selected>Select</option> <!-- Placeholder option -->
+      <option value="option1">Both</option>
+      <option value="option2">Location</option>
+      <option value="option3">Earning</option>
+    </select> <div class="forms-inputs mb-4 fw-bold">
+        <div>Upload Images</div> 
+        <input 
+          type="file" 
+          class="form-control form-control-lg" 
+          id="imageUpload" 
+          v-on:change="handleImageUpload" 
+          accept="image/*" 
+          multiple
+        >
+      </div>
+        
+      </div>
+      <div class="mb-3 mt-3"> <button v-on:click.stop.prevent="submit" class="btn btn-dark w-100 rounded-pill">Submit</button> </div>
+    </div>
+   <!-- <div class="success-data" v-else>
+        <div class="text-center d-flex flex-column"> <i class='bx bxs-badge-check'></i> <span class="text-center fs-1">You have been logged in <br> Successfully</span> </div>
+    </div>-->
+</div>
+</div>
+</div>
+</div>
+{%endblock%}

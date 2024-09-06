@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+{%block title%}SignUp{%endblock%}
+{%block content%}
+    <div class="container-xxl min-vh-100   bg-dark" >
+        <div class="row d-flex justify-content-center">
+            <div class="col-md-4">
+                <div class="card px-5 py-5 mt-3" id="form1"> <header class="border-bottom pb-3 mb-4 fw-bolder text-center fa-2x">SIGN UP</header>
+                    <div class="form-data" v-if="!submitted">
+                        <form method="post">
+                        <div class="forms-inputs mb-4 fw-bold">
+                             <div class="pe-5">Username</div> 
+                             <input id="uname" name="uname" autocomplete="off" class="form-control form-control-lg" type="text" v-model="username"  v-on:blur="usernameBlured = true">                            <div class="invalid-feedback">A valid <b>username is required!</b></div>
+                        </div>
+                        <div class="forms-inputs mb-4 fw-bold">
+                            <div class="pe-5">Email</div> 
+                           <input id="email" name="email" autocomplete="off" class="form-control form-control-lg" type="text" v-model="email" v-on:blur="emailBlured = true">
+                       </div>
+                        <div class="forms-inputs mb-4 fw-bold"><div>Password</div> 
+                             <input id="pass" name="pass" autocomplete="off" class="form-control form-control-lg" type="password" v-model="password"  v-on:blur="passwordBlured = true">
+                        </div>
+                        <div class="forms-inputs mb-4 fw-bold">
+                            <div>Confirm Password</div>
+                            <input id="cpass" name="cpass" autocomplete="off" class="form-control form-control-lg" type="password" v-model="confirmPassword"  v-on:blur="confirmPasswordBlured = true">
+                            <div class="invalid-feedback">Passwords do not match!</div>
+                          </div>
+                        <div class="mb-3"> <button v-on:click.stop.prevent="submit" class="btn btn-dark w-100 rounded-pill">SignUp</button> </div>
+                        </form>
+                        <div class="mb-3 mt-3"><a href="/login"> <button type="button" class="btn btn-dark w-100 rounded-pill">Login</button></a> </div>
+                    </div>
+                   <!-- <div class="success-data" v-else>
+                        <div class="text-center d-flex flex-column"> <i class='bx bxs-badge-check'></i> <span class="text-center fs-1">You have been logged in <br> Successfully</span> </div>
+                    </div>-->
+                </div>
+            </div>
+        </div>
+    </div>
+    {%endblock%}

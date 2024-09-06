@@ -1,0 +1,63 @@
+{% extends "base.html" %}
+{%block title%}Sell{%endblock%}
+{%block content%}
+    <div class="container-xxl min-vh-100   bg-dark" >
+        <div class="row d-flex justify-content-center">
+            <div class="col-md-7">
+                <div class="card px-5 py-5 mt-3" id="form1"><header class="border-bottom pb-3 mb-4 fw-bolder text-center fa-2x">SELL</header>
+                    <div class="form-data" v-if="!submitted">
+                        <div class="forms-inputs mb-4 fw-bold">
+                             <div class="pe-5">Book Title</div> 
+                             <input id="usernameInput" autocomplete="off" class="form-control form-control-lg" type="text" v-model="username" v-bind:class="{'is-invalid': !validUsername(username) && usernameBlured}" v-on:blur="usernameBlured = true">                            <div class="invalid-feedback">A valid <b>username is required!</b></div>
+                        </div>
+                        <div class="forms-inputs mb-4 fw-bold">
+                            <div class="pe-5">Author</div> 
+                           <input autocomplete="off" class="form-control form-control-lg" type="text" v-model="name" v-on:blur="emailBlured = true"> 
+                           <!--<div class="invalid-feedback">A valid email is required!</div>-->
+                       </div>
+                        <div class="forms-inputs mb-4 fw-bold"><div>Price</div> 
+                             <input autocomplete="off" class="form-control form-control-lg" type="number" v-model="price" id="price" v-on:blur="passwordBlured = true">
+                        
+        
+                        </div>
+                        <div class="forms-inputs mb-4 fw-bold">
+                            <div>Description</div>
+                            <textarea id="description" class="form-control form-control-lg" v-model="description" rows="4" cols="50"></textarea>
+                          </div>
+
+                          <div class="forms-inputs mb-4 fw-bold">
+                          <div>Categories</div>
+                          <select id="options"  v-model="selectedOption" class="select w-100">
+                            <option value="" disabled selected>Select</option> <!-- Placeholder option -->
+                            <option value="option1">Educational</option>
+                            <option value="option2">Adventure</option>
+                            <option value="option3">Sci-Fi</option>
+                            <option value="option3">Action</option>
+                          </select>
+
+                          </div>
+
+                          <div class="forms-inputs mb-4 fw-bold">
+                            <div>Upload Images</div> 
+                            <input 
+                              type="file" 
+                              class="form-control form-control-lg" 
+                              id="imageUpload" 
+                              v-on:change="handleImageUpload" 
+                              accept="image/*" 
+                              multiple
+                            >
+                          </div>
+                                         
+
+                
+                        <div class="mb-3 mt-3"> <button v-on:click.stop.prevent="submit" class="btn btn-dark w-100 rounded-pill">Submit</button> </div>
+                    </div>
+                   <!-- <div class="success-data" v-else>
+                        <div class="text-center d-flex flex-column"> <i class='bx bxs-badge-check'></i> <span class="text-center fs-1">You have been logged in <br> Successfully</span> </div>
+                    </div>-->
+                </div>
+            </div>
+        </div>
+    </div>
+{%endblock%}

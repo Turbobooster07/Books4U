@@ -1,0 +1,211 @@
+{% extends "base.html" %}
+{%block title%}Info{%endblock%}
+{%block content%}
+<link rel="stylesheet" type="text/css" href="% static '{/website/static/styles.css' %}">
+
+<!--
+<div class="container">
+        <div class="Book1">
+            <div>
+            <img class="Novel1" src="{{url_for('static', filename='A Misfortune of Lake Monsters By Nicole M. Wolverton.jpg')}}" />
+        </div> 
+        <p>Delta</p>
+        </div> 
+        <div>
+            <h3 class="Book Name">A Misfortune of Lake Monsters</h3>    
+        </div>
+                <div class="Book2">
+                    <img src="{{url_for('static', filename='A Misfortune of Lake Monsters By Nicole M. Wolverton.jpg')}}" class="Novel1" />
+                </div>
+                <div>
+                    <h3 class="Book Name">A Misfortune of Lake Monsters</h3> 
+                </div>
+        </div>
+        <div class="Book3">
+            <img src="{{url_for('static', filename='A Misfortune of Lake Monsters By Nicole M. Wolverton.jpg')}}" class="Novel1" />
+            <h3 class="Book Name">A Misfortune of Lake Monsters</h3> 
+        </div>
+        </div>
+    <style>
+    .Novel1{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f0f0f0;
+        }
+        .Book2{
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            margin: 10px;
+            padding: 20px;
+            width: 250px;
+            text-align: center;
+        }
+.Book1{
+    justify-content: center;
+    color: black;
+}
+.Book3{
+    width: 100px;
+    display: inline-block;
+}
+.container{
+    display: inline-block;
+    justify-content: center;
+}
+
+    </style>
+-->
+<!--
+<div class="div1"></div>
+    div1
+</div>
+<div class="div2"></div>
+    div2
+</div>
+<style>
+    .div1{
+        background-color: lightblue;
+    }
+    .div2{
+        background-color: red;
+    }
+</style>
+-->
+
+
+
+<!--
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Display</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f0f0f0;
+        }
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+        }
+        .product-card {
+            background-color: white;
+            border-radius: 8px;
+            padding: 15px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        .product-image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 4px;
+        }
+        .product-name {
+            font-size: 18px;
+            font-weight: bold;
+            margin: 10px 0;
+        }
+        .product-price {
+            font-size: 16px;
+            color: #4a4a4a;
+        }
+    </style>
+</head>
+<body>
+    <h1>Our Products</h1>
+    
+    <div class="product-grid">
+        {% for product in products %}
+            <div class="product-card">
+                <img src="{{url_for('static', filename='A Misfortune of Lake Monsters By Nicole M. Wolverton.jpg')}} " class="Image"
+                <h2 class="product-name">A Misfortune of Lake Monsters By Nicole M. Wolverton</h2>
+                <p class="product-price">500</p>
+            </div>
+        {% endfor %}
+    </div>
+</body>
+</html>
+
+-->
+
+
+<div class="container">
+    <div class="row">
+      <div class="col">
+        <div class="Book-image">
+            <img src="{{url_for('static', filename='A Misfortune of Lake Monsters By Nicole M. Wolverton.jpg')}}">
+        </div>
+      </div>
+      <div class="col">
+        <div class="Book-desc">
+        <p class="Book-desc1">A Misfortune of Lake Monsters </p>
+      </div>
+    <div class="Book_Summary">
+    <h5>Nicole M. Wolverton</h5>
+    <p class="Book_desc">Lemon Ziegler wants to escape rural Devil’s Elbow, Pennsylvania to attend college―but that’s impossible now that she’s expected to impersonate the town’s lake monster for the rest of her life. Her family has been secretly keeping the tradition of Old Lucy, the famed (and very fake) monster of Lake Lokakoma, alive for generations, all to keep the tourists coming. Without Lemon, the town dies, and she can’t disappoint her grandparents . . . or tell her best friends about any of it. That includes Troy Ramirez, who has been covertly in love with Lemon for years, afraid to ruin their friendship by confessing his feelings. When a very real, and very hungry monster is discovered in the lake, secrets must fall by the wayside. Determined to stop the monster, Lemon and her best friends are the only thing standing between Devil’s Elbow and the monster out for blood.</p>
+    </div>
+    <div>
+        <button class="Buy-Button" href="payment.html">Buy</button>
+    </div>
+    </div>
+   </div>
+   </div>
+  
+  <div class="container2">
+  <div class="row">
+    <div class="col">
+
+    </div>
+    </div>
+
+
+
+
+  <style>
+    .Book_desc{
+        font-size: 15px;
+        font-family: Arial;
+        margin-top: 40px;
+        margin-left: 0;
+    }
+    .Book-image{
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        height: auto;
+    }
+    .Book-desc1{
+        width: 500px;
+        font-size: 20px;
+        font-weight: bold;
+    }
+    .container{
+        display: flex;
+        display: block;
+    }
+    .Buy-Button{
+        background-color: Red;
+        color: white;
+        width: 100px;
+        margin-left: 100px;
+        border-radius: 20px;
+        border: none;
+    }
+    .Buy-Button:hover{
+        background-color: Green;
+    }
+  </style>
+{%endblock%}
